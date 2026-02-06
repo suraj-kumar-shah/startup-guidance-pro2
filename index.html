@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupGuidance Pro | Expert Startup Mentorship Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="loader">
+                <div class="rocket">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="loading-text">Launching StartupGuidance...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">Startup</span>
+                        <span class="logo-secondary">Guidance</span>
+                        <span class="logo-badge">PRO</span>
+                    </div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a></li>
+                    <li><a href="#features" class="nav-link">
+                        <i class="fas fa-star"></i> Features
+                    </a></li>
+                    <li><a href="#advice" class="nav-link">
+                        <i class="fas fa-lightbulb"></i> Advice
+                    </a></li>
+                    <li><a href="#experts" class="nav-link">
+                        <i class="fas fa-users"></i> Experts
+                    </a></li>
+                    <li><a href="#resources" class="nav-link">
+                        <i class="fas fa-book"></i> Resources
+                    </a></li>
+                    <li class="nav-buttons">
+                        <button id="darkModeToggle" class="btn-icon" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <a href="#chat" class="btn-chat" id="openChatBtn">
+                            <i class="fas fa-comment-dots"></i>
+                            <span>Chat Now</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <span class="badge"><i class="fas fa-check-circle"></i> Trusted by 50K+ Founders</span>
+                    <span class="badge"><i class="fas fa-award"></i> Industry Award 2024</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="gradient-text">Launch Your Startup</span>
+                    <span class="hero-subtitle">With Expert Guidance & AI-Powered Insights</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Join the world's largest startup mentorship platform. Get personalized advice from successful founders, 
+                    investors, and industry experts. Your success journey starts here.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#chat" class="btn-primary" id="heroChatBtn">
+                        <i class="fas fa-robot"></i> Ask AI Assistant
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value" data-count="500">0</div>
+                        <div class="stat-label">Expert Advisors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="10000">0</div>
+                        <div class="stat-label">Success Stories</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="95">0</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="24">0</div>
+                        <div class="stat-label">Hour Support</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Growth Analytics</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-handshake"></i>
+                        <span>Investor Network</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Insights</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div class="particles" id="particles-js"></div>
+        </div>
+    </section>
+
+    <!-- AI Chat Assistant -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-info">
+                <h4>Startup AI Assistant</h4>
+                <p>Online • Ready to help</p>
+            </div>
+            <div class="chatbot-controls">
+                <button class="chatbot-minimize" id="minimizeChat">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="chatbot-close" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-welcome">
+                <div class="welcome-message">
+                    <p>👋 <strong>Hello! I'm your AI startup assistant</strong></p>
+                    <p class="welcome-subtitle">I can help you with:</p>
+                    <div class="quick-questions">
+                        <button class="quick-question" data-question="What is a startup?">
+                            🤔 What is a startup?
+                        </button>
+                        <button class="quick-question" data-question="I need startup ideas">
+                            💡 Startup Ideas
+                        </button>
+                        <button class="quick-question" data-question="How to get funding?">
+                            💰 Funding Guide
+                        </button>
+                        <button class="quick-question" data-question="How to build an MVP?">
+                            🛠️ Build MVP
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+        </div>
+        
+        <div class="chatbot-input">
+            <div class="input-container">
+                <input type="text" id="chatInput" placeholder="Ask me anything about startups...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <button id="voiceInput" class="voice-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+            <div class="input-hint">
+                <i class="fas fa-lightbulb"></i> Try: "How to validate my startup idea?"
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Trigger Button -->
+    <button class="chat-trigger" id="chatTrigger">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chat-notification"></span>
+    </button>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Why Choose Us</span>
+                <h2 class="section-title">Everything You Need to <span class="gradient-text">Succeed</span></h2>
+                <p class="section-description">
+                    We provide comprehensive tools and guidance for every stage of your startup journey
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper gradient-1">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <h3>AI-Powered Insights</h3>
+                    <p>Get data-driven recommendations and market analysis using our advanced AI algorithms.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Real-time Analysis</span>
+                        <span class="tag">Predictive Models</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper gradient-2">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <h3>1:1 Expert Mentorship</h3>
+                    <p>Connect directly with industry veterans and successful entrepreneurs for personalized guidance.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Personal Matchmaking</span>
+                        <span class="tag">Weekly Sessions</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper gradient-3">
+                            <i class="fas fa-chart-network"></i>
+                        </div>
+                    </div>
+                    <h3>Investor Network</h3>
+                    <p>Access our curated network of angel investors, VCs, and funding opportunities.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Pitch Practice</span>
+                        <span class="tag">Funding Tools</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper gradient-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <h3>Growth Toolkit</h3>
+                    <p>Comprehensive resources including templates, calculators, and automated workflows.</p>
+                    <div class="feature-tags">
+                        <span class="tag">500+ Templates</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advice Section -->
+    <section class="advice-section" id="advice">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Learn & Grow</span>
+                <h2 class="section-title">Expert <span class="gradient-text">Advice</span> Categories</h2>
+                <p class="section-description">
+                    Browse through thousands of actionable insights from industry leaders
+                </p>
+            </div>
+            
+            <div class="advice-categories">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Funding & Finance</h3>
+                    <p>VC pitching, bootstrapping, financial modeling</p>
+                    <span class="category-count">245 Articles</span>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Product Development</h3>
+                    <p>MVP building, user testing, agile methodology</p>
+                    <span class="category-count">189 Articles</span>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing & Sales</h3>
+                    <p>Growth hacking, digital marketing, sales funnels</p>
+                    <span class="category-count">312 Articles</span>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team & Culture</h3>
+                    <p>Hiring strategies, remote teams, company culture</p>
+                    <span class="category-count">156 Articles</span>
+                </div>
+            </div>
+            
+            <div class="featured-advice">
+                <div class="advice-card featured">
+                    <div class="advice-badge">Featured</div>
+                    <h3>The Ultimate Seed Funding Playbook</h3>
+                    <p>A comprehensive guide to securing your first round of funding, including pitch deck templates, investor outreach strategies, and term sheet negotiation tips.</p>
+                    <div class="advice-meta">
+                        <div class="expert-avatar">
+                            <img src="suraj.png" alt="Suraj Pathak">
+                        </div>
+                        <div class="meta-info">
+                            <span class="expert-name">Suraj Pathak</span>
+                            <span class="advice-date">3 days ago • 15 min read</span>
+                        </div>
+                        <button class="bookmark-btn">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experts Section -->
+    <section class="experts-section" id="experts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Meet Our Mentors</span>
+                <h2 class="section-title">Learn from <span class="gradient-text">Industry Leaders</span></h2>
+                <p class="section-description">
+                    Get mentored by founders, investors, and specialists who've built successful ventures
+                </p>
+            </div>
+            
+            <div class="experts-grid">
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="suraj.png" alt="Suraj Pathak">
+                        <div class="expert-status online"></div>
+                        <div class="expert-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Suraj Pathak</h3>
+                        <p class="expert-title">Serial Entrepreneur • 3 Exits</p>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 Rating</span>
+                            <span><i class="fas fa-users"></i> 250+ Mentees</span>
+                        </div>
+                        <div class="expert-specialties">
+                            <span class="specialty">SaaS Scaling</span>
+                            <span class="specialty">VC Funding</span>
+                        </div>
+                        <button class="btn-mentor">
+                            <i class="fas fa-calendar-check"></i> Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="neha.png" alt="Neha Sah">
+                        <div class="expert-status busy"></div>
+                        <div class="expert-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Neha Sah</h3>
+                        <p class="expert-title">Investment Director • $100M+ Funded</p>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.8 Rating</span>
+                            <span><i class="fas fa-users"></i> 180+ Mentees</span>
+                        </div>
+                        <div class="expert-specialties">
+                            <span class="specialty">Fundraising</span>
+                            <span class="specialty">Pitching</span>
+                        </div>
+                        <button class="btn-mentor">
+                            <i class="fas fa-calendar-check"></i> Book Session
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="expert-card">
+                    <div class="expert-image">
+                        <img src="arti.png" alt="Arti">
+                        <div class="expert-status online"></div>
+                        <div class="expert-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Arti</h3>
+                        <p class="expert-title">Startup Lawyer • 15+ Years Experience</p>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-star"></i> 4.9 Rating</span>
+                            <span><i class="fas fa-users"></i> 320+ Mentees</span>
+                        </div>
+                        <div class="expert-specialties">
+                            <span class="specialty">Legal Compliance</span>
+                            <span class="specialty">IP Protection</span>
+                        </div>
+                        <button class="btn-mentor">
+                            <i class="fas fa-calendar-check"></i> Book Session
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2>🚀 Get Weekly Startup Insights</h2>
+                    <p>Join <strong>15,000+ founders</strong> receiving curated advice, case studies, and exclusive resources.</p>
+                    
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your professional email" required>
+                            <button type="submit">
+                                <span>Subscribe</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="newsletterConsent" required>
+                            <label for="newsletterConsent">
+                                I agree to receive weekly startup insights and updates
+                            </label>
+                        </div>
+                    </form>
+                    
+                    <div class="trust-badges">
+                        <span><i class="fas fa-shield-alt"></i> No spam, ever</span>
+                        <span><i class="fas fa-lock"></i> Privacy protected</span>
+                        <span><i class="fas fa-clock"></i> 1 email/week</span>
+                    </div>
+                </div>
+                
+                <div class="newsletter-image">
+                    <div class="newsletter-visual">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary">Startup</span>
+                            <span class="logo-secondary">Guidance</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering the next generation of entrepreneurs with AI-driven insights and expert mentorship.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Success Stories</a></li>
+                            <li><a href="#">AI Assistant</a></li>
+                            <li><a href="#">API Access</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Templates</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Podcast</a></li>
+                            <li><a href="#">Research</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Live Chat</a></li>
+                            <li><a href="#">System Status</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 StartupGuidance Pro. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">GDPR</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Remove Botpress Webchat script -->
+    <!-- <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script> -->
+    <!-- <script>
+        window.botpress.init({
+            "botId": "5eada8c4-7203-4120-a7d0-5017bf3c0d5d",
+            "configuration": {
+                "composerPlaceholder": "Ask me anything about startups...",
+                "botName": "Startup AI Assistant",
+                "botAvatar": "https://cdn.botpress.cloud/webchat/v2/assets/default-avatar.svg",
+                "botDescription": "Your AI-powered startup mentor",
+                "website": "https://www.startupguidance.com",
+                "email": "support@startupguidance.com",
+                "phone": "+1 (950) 846-5909",
+                "color": "#6C63FF",
+                "variant": "floating",
+                "floatingIconStyle": "gradient",
+                "floatingIconColor": "#6C63FF",
+                "theme": "modern",
+                "themeMode": "light",
+                "fontFamily": "Inter, sans-serif",
+                "radius": 12,
+                "showBotInfoPage": true,
+                "enableConversationDeletion": true,
+                "enableTranscriptDownload": true,
+                "enablePersistHistory": true,
+                "stylesheet": "https://cdn.jsdelivr.net/npm/@botpress/webchat/dist/style.css",
+                "layout": {
+                    "width": "400px",
+                    "height": "600px",
+                    "location": "bottom-right"
+                }
+            },
+            "clientId": "7299fc46-e0d1-4653-a9e8-4809d7e167a3"
+        });
+    </script> -->
+</body>
+</html>
