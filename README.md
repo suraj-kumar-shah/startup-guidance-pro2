@@ -50,6 +50,8 @@ This project demonstrates frontend fundamentals, clean project structuring, and 
 
 ### 1. Clone the repository
 
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/startup-guidance-pro.git
 cd startup-guidance-pro
