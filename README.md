@@ -38,7 +38,9 @@ This project demonstrates frontend fundamentals, clean project structuring, and 
 - Font Awesome – Icons  
 
 ### Design
-- CSS Animations – Smooth transitions  
+- CSS Animations – Smooth transitions
+- - CSS Animations – Smooth transitions
+  - - CSS Animations – Smooth transitions 
 - CSS Variables – Theme management  
 - Responsive Design – Mobile-first approach  
 
